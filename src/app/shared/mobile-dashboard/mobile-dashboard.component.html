@@ -1,0 +1,12 @@
+
+<div class="row" *ngIf="mobileArr.length > 0; else noMobiles">
+    <div class="col-12 mb-4" *ngFor="let mobile of mobileArr">
+        <app-mobile [mobileObj]="mobile"></app-mobile>
+    </div>
+</div>
+
+<ng-template #noMobiles>
+    <p class="alert alert-info">
+        <strong>No Mobile !!!</strong>
+    </p>
+</ng-template>
